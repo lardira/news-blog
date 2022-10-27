@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SearchBox from './components/SearchBox';
-import FeedContainer from './components/FeedContainer';
+import Feed from './components/Feed';
 import Button from './components/Button';
 
 const App = () => {
@@ -50,7 +50,7 @@ const App = () => {
       <SearchBox />
       <br /> {/* idk how to it differently. maybe css? */}
       <Button text='Create new post' className='create-post-button' />
-      <FeedContainer className='posts-feed' posts={posts} />
+      <Feed posts={posts} />
       <Footer />
     </div>
   );
