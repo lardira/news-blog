@@ -6,7 +6,7 @@ const Post = ({ className, data }) => {
   return (
     <div className={`${className} post`}>
       <h2>{title}</h2>
-      <img src={imgSrc} alt='post with something to show' />
+      <img src={imgSrc} alt='for post' />
       <p>
         <span>{text}</span>
       </p>
