@@ -6,9 +6,11 @@ const Feed = ({ className, posts }) => {
   return (
     <div className='feed-container'>
       <div className={`${className || ''} feed`}>
-        {posts.map(post => (
-          <Post data={post} key={post.id} />
-        ))}
+        {posts.map((post, i) => {
+          //reverse orders
+          const mirroredPost = posts[posts.length - 1 - i];
+          return (<Post data={mirroredPost} key={mirroredPost.id} />);
+        })}
       </div>
     </div>
   );
