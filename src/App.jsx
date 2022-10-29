@@ -1,5 +1,3 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
 import SearchBox from './components/SearchBox';
 import Feed from './components/Feed';
 import Button from './components/Button';
@@ -46,12 +44,10 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Header />
       <SearchBox />
       <br /> {/* idk how to it differently. maybe css? */}
       <Button text='Create new post' className='create-post-button' />
       <Feed posts={posts} />
-      <Footer />
     </div>
   );
 };

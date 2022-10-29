@@ -1,6 +1,4 @@
-import './styles/Footer.css';
-
-import Developer from './Developer';
+import Developer from './components/Developer';
 
 const Footer = () => {
   return (
