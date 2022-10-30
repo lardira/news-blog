@@ -45,7 +45,7 @@ const App = () => {
   const newPostFormInputFields = {
     Title: {type: 'text', required: true},
     Text: {type: 'text', required: true},
-    Image: {type: 'text', required: true},
+    Image: {type: 'url', required: true},
   };
 
   const onNewPost = event => {
