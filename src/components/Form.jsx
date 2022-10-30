@@ -35,17 +35,19 @@ const Form = ({ inputs, onSubmit, className, buttonName, validator }) => {
   };
 
   return (
-    <form className={`${className} form`} onSubmit={submitHandler}>
-      {Object.entries(inputs).map(([key, value], i) => {
-        return (
-          <label key={key + i}>
-            {key}:
-            <input type={value.type} />
-          </label>
-        );
-      })}
-      <input className='submit-button' type='submit' value={buttonName} />
-    </form>
+    <div className='form-container'>
+      <form className={`${className} form`} onSubmit={submitHandler}>
+        {Object.entries(inputs).map(([key, value], i) => {
+          return (
+            <label className='form-label' key={key + i}>
+              {key}:
+              <input className='form-input' type={value.type} />
+            </label>
+          );
+        })}
+        <input className='submit-button' type='submit' value={buttonName} />
+      </form>
+    </div>
   );
 };
 
