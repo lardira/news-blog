@@ -7,7 +7,7 @@ const Post = ({ className, data }) => {
     <div className='post-container'>
       <div className={`${className || ''} post`}>
         <h2>{title}</h2>
-        <img src={imgSrc} alt='for post' />
+        <img className='post-img' src={imgSrc} alt='for post' />
         <p>
           <span>{text}</span>
         </p>
