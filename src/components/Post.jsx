@@ -5,12 +5,12 @@ const Post = ({ className, data }) => {
 
   return (
     <div className='post-container'>
-      <div className={`${className || ''} post`}>
-        <h2>{title}</h2>
+      <div className={`${className} post`}>
+        <h2 className='post-title'>{title}</h2>
         <img className='post-img' src={imgSrc} alt='for post' />
-        <p>
+        <div className='post-text'>
           <span>{text}</span>
-        </p>
+        </div>
       </div>
     </div>
   );
