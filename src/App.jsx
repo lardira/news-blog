@@ -84,7 +84,11 @@ const App = () => {
 
   return (
     <div className='App'>
-      <SearchBox placeHolder='Поиск...' onSearchHandler={onSearch} value={searchString} />
+      <SearchBox
+        placeHolder='Поиск...'
+        onSearchHandler={onSearch}
+        value={searchString}
+      />
       <Form
         inputs={inputFields}
         onSubmit={onNewPost}
