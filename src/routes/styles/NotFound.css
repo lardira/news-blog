@@ -1,0 +1,10 @@
+.not-found-page {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.not-found-page img {
+    max-width: 40vw;
+}

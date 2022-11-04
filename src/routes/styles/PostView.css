@@ -1,0 +1,16 @@
+.post-view-container {
+  margin: auto;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px 0.1px lightgrey;
+}
+
+.post-view {
+  padding: 25px;
+  margin: 25px;
+}
+
+.post-view-img {
+    max-width: 70%;
+}

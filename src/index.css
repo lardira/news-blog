@@ -14,7 +14,7 @@
 .developer-name {
   font-family: 'Poor Story', cursive;
   font-size: 16pt;
-  color: #D7D9DB;
+  color: #d7d9db;
   text-decoration: none;
 
   transition: font-size 0.3s;
@@ -30,7 +30,8 @@ body {
 }
 
 header {
-  background-color: #3E4D5C; 
+  background-color: #3e4d5c;
+  padding: 10px;
 }
 
 header .title {
@@ -38,17 +39,22 @@ header .title {
   padding: 0;
 }
 
+.home-button {
+  text-decoration: underline;
+  font-size: 32pt;
+  color: black;
+}
+
 footer {
-  color: #D7D9DB;
-  background-color: #3E4D5C; 
+  color: #d7d9db;
+  background-color: #3e4d5c;
 }
 
 footer span {
   margin: 0;
   padding: 0;
   display: grid;
-  text-align: center;  
+  text-align: center;
   font-family: 'Poor Story';
   font-size: 28pt;
 }
-
