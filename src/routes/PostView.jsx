@@ -15,10 +15,10 @@ function PostView() {
   return (
     <div className='post-view-container'>
       <div className='post-view'>
-        <h1 className='post-view-title post-title'>{title}</h1>
-        <img className='post-view-img post-img' src={imgSrc} alt='N\A' />
+        <h1 className='post-view-title'>{title}</h1>
+        <img className='post-view-img' src={imgSrc} alt='N\A' />
         <p className='post-view-text-container'>
-          <span className='post-view-text post-text'>{text}</span>
+          <span className='post-view-text'>{text}</span>
         </p>
       </div>
     </div>
