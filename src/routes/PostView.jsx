@@ -2,7 +2,6 @@ import './styles/PostView.css';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
-import Post from '../components/Post';
 import { getBy } from '../utils/posts.js';
 
 function PostView() {
