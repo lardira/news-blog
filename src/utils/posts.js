@@ -40,13 +40,6 @@ const getBy = id => {
   return POSTS.find(post => post.id === id);
 };
 
-const newPost = (id, imgSrc, title, text) => {
-  return {
-    id,
-    imgSrc,
-    title,
-    text,
-  };
-};
+const newPost = (id, imgSrc, title, text) => ({ id, imgSrc, title, text });
 
 export { POSTS, getBy, newPost };

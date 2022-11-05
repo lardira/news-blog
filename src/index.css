@@ -1,27 +1,37 @@
 .developers-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding-bottom: 50px;
+}
+
+.developer-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.developer {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .developer-img {
   border-radius: 50%;
   max-width: 50px;
-  max-height: 50px;
 }
 
 .developer-name {
   font-family: 'Poor Story', cursive;
-  font-size: 16pt;
   color: #d7d9db;
   text-decoration: none;
+  font-size: 1.2em;
 
-  transition: font-size 0.3s;
+  transition: font-size 0.20s;
 }
 
-.developer-name:hover {
-  font-size: 20pt;
+.developer-container:hover {
+  font-size: 1.6em;
 }
 
 body {
@@ -46,6 +56,9 @@ header .title {
 }
 
 footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   color: #d7d9db;
   background-color: #3e4d5c;
 }
@@ -53,8 +66,6 @@ footer {
 footer span {
   margin: 0;
   padding: 0;
-  display: grid;
-  text-align: center;
   font-family: 'Poor Story';
   font-size: 28pt;
 }
