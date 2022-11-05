@@ -1,5 +1,5 @@
 .post-container {
-  display: grid;
+  display: flex;
   justify-content: center;
   text-align: center;
   background-color: lightgray;
@@ -10,6 +10,21 @@
   margin-right: 25vw;
   border-radius: 5px;
   transition: box-shadow 150ms;
+}
+
+.post-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+}
+
+.post-text {
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
 }
 
 .post-container:hover {

@@ -1,16 +1,35 @@
 .post-view-container {
-  margin: auto;
-  width: 50%;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 0 10px 0.1px lightgrey;
+  display: flex;
+  justify-items: center;
 }
 
 .post-view {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-shadow: 0 0 10px 0.1px lightgrey;
   padding: 25px;
-  margin: 25px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
-.post-view-img {
-    max-width: 70%;
+@media only screen and (max-width: 800px) {
+  .post-view-container {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .post-view-container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .post-view-container {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }
