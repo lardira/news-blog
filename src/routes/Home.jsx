@@ -4,7 +4,7 @@ import Feed from '../components/Feed';
 import Form from '../components/Form';
 import { POSTS, newPost } from '../utils/posts.js';
 
-function Home() {
+const Home = () => {
   const [posts, setPosts] = useState(POSTS);
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [searchString, setSearchString] = useState('');
@@ -13,7 +13,7 @@ function Home() {
     Title: { type: 'text', required: true },
     Text: { type: 'text', required: true },
     Image: { type: 'url', required: true },
-  }
+  };
 
   useEffect(() => {
     const lowSearchString = searchString.toLocaleLowerCase();
@@ -41,7 +41,7 @@ function Home() {
   return (
     <div className='App'>
       <SearchBox
-        placeHolder='Поиск...'
+        placeHolder='Seach here...'
         onSearchHandler={onSearch}
         value={searchString}
       />
@@ -55,6 +55,6 @@ function Home() {
       <Feed posts={filteredPosts} />
     </div>
   );
-}
+};
 
 export default Home;

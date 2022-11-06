@@ -1,6 +1,7 @@
 import './styles/Form.css';
 
 //TODO: use component children enstead of array of objects
+//TODO: rewrite form
 const Form = ({
   inputs,
   onSubmit,
@@ -10,10 +11,6 @@ const Form = ({
   formTitle,
 }) => {
   const validateInputs = (inputs, event) => {
-    if (validator) {
-      return validator(inputs, event);
-    }
-
     let message = '';
 
     const passed = Object.entries(inputs).every(([key, value], i) => {
@@ -30,6 +27,11 @@ const Form = ({
 
     //TODO: highlight the inputs if there are empty
     message && alert(message);
+
+    if (validator) {
+      return validator(inputs, event);
+    }
+
     return passed;
   };
 
