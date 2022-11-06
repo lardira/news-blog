@@ -1,46 +1,46 @@
 .form-container {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 20px;
-    background-color: #f6f8fa;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px;
+  background-color: #f6f8fa;
 }
 
 .form-title {
-    margin-bottom: 6px; /* shadow size */
-    font-family: 'Inter';
-    font-weight: bold;
-    color: #3e4d5c;
+  margin-bottom: 6px; /* shadow size */
+  font-weight: bold;
+  color: #3e4d5c;
 }
 
 .form-label {
-    font-family: 'Inter';
-    font-weight: bold;
-    display: flex;
-    color: #3e4d5c;
-    flex-direction: column;
+  font-family: 'Inter';
+  font-weight: bold;
+  display: flex;
+  color: #3e4d5c;
+  flex-direction: column;
 }
 
 .form-input {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .form-submit-button {
-    margin-top: 20px;
-    transition: color 0.3s;
-    transition: background-color 0.15s;
+  margin-top: 20px;
+  transition: color 0.3s;
+  transition: background-color 0.15s;
 }
 
 .form-submit-button:hover {
-    color: white;
-    background-color: #3e4d5c;
+  cursor: pointer;
+  color: white;
+  background-color: #3e4d5c;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border: 3px solid #3e4d5c;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 0.1px #9b989a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 3px solid #3e4d5c;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0.1px #9b989a;
 }

@@ -14,12 +14,10 @@
 }
 
 .post-title {
-  font-family: 'Inter', sans-serif;
   font-weight: 800;
 }
 
 .post-text {
-  font-family: 'Inter', sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

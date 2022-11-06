@@ -6,10 +6,17 @@ function Layout() {
   return (
     <Fragment>
       <header>
-        <Link to='/posts' className='home-button'>
-          NewsBlog
-        </Link>
-        <nav>{/* //TODO: navbar */}</nav>
+        <nav>
+          <Link to='/posts' className='home-button'>
+            NewsBlog
+          </Link>
+          <Link to='/sign-in' className='sign-in-button'>
+            Sign In
+          </Link>
+          <Link to='/about' className='about-button'>
+            About
+          </Link>
+        </nav>
       </header>
 
       <Outlet />

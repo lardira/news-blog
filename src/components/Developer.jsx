@@ -1,3 +1,5 @@
+import './styles/Developer.css';
+
 const Developer = ({ className, imgSrc, alt, href, linkTitle }) => {
   return (
     <div className={`${className} developer`}>
