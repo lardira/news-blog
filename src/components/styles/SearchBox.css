@@ -1,0 +1,12 @@
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background-color: #f6f8fa;
+}
+
+.search-box {
+  width: 35%;
+  height: 5%;
+  outline: none;
+}
