@@ -1,4 +1,2 @@
 # news-blog
-simple React project 
-
-Yes.
+A simple React project.
