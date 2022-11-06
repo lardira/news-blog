@@ -1,6 +1,14 @@
 import './styles/Form.css';
 
-const Form = ({ inputs, onSubmit, className, buttonName, validator }) => {
+//TODO: use component children enstead of array of objects
+const Form = ({
+  inputs,
+  onSubmit,
+  className,
+  buttonName,
+  validator,
+  formTitle,
+}) => {
   const validateInputs = (inputs, event) => {
     if (validator) {
       return validator(inputs, event);
@@ -36,6 +44,7 @@ const Form = ({ inputs, onSubmit, className, buttonName, validator }) => {
 
   return (
     <div className='form-container'>
+      <h3 className='form-title'>{formTitle || 'Form'}</h3>
       <form className={`${className} form`} onSubmit={submitHandler}>
         {Object.entries(inputs).map(([key, value], i) => {
           return (
@@ -45,7 +54,11 @@ const Form = ({ inputs, onSubmit, className, buttonName, validator }) => {
             </label>
           );
         })}
-        <input className='submit-button' type='submit' value={buttonName} />
+        <input
+          className='form-submit-button'
+          type='submit'
+          value={buttonName}
+        />
       </form>
     </div>
   );

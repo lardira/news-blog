@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import SearchBox from '../components/SearchBox';
 import Feed from '../components/Feed';
 import Form from '../components/Form';
@@ -7,14 +6,14 @@ import { POSTS, newPost } from '../utils/posts.js';
 
 function Home() {
   const [posts, setPosts] = useState(POSTS);
-
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [searchString, setSearchString] = useState('');
-  const [inputFields, setInputFields] = useState({
+
+  const inputFields = {
     Title: { type: 'text', required: true },
     Text: { type: 'text', required: true },
     Image: { type: 'url', required: true },
-  });
+  }
 
   useEffect(() => {
     const lowSearchString = searchString.toLocaleLowerCase();
@@ -47,6 +46,7 @@ function Home() {
         value={searchString}
       />
       <Form
+        formTitle='Create Post'
         inputs={inputFields}
         onSubmit={onNewPost}
         className='new-post-form'

@@ -34,6 +34,34 @@
   font-size: 1.6em;
 }
 
+input {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: large;
+  border: 2.5px solid #3e4d5c;
+  padding: 5px;
+  border-radius: 5px;
+  color: #3e4d5c;
+  transition: box-shadow 0.15s;
+  transition: color 0.3s;
+  transition: background-color 0.15s;
+  box-shadow: 0 0 6px 0.1px #9b989a;
+  outline: none;
+}
+
+input:focus {
+  color: white;
+  background-color: #3e4d5c;
+}
+
+input::placeholder {
+  transition: color 0.3s;
+}
+
+input:focus::placeholder {
+  color: rgb(223, 223, 223);
+}
+
 body {
   margin: 0;
   padding: 0;
