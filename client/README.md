@@ -1,2 +1,2 @@
 # news-blog
-A simple React project.
+The "frontend". Written on React.
