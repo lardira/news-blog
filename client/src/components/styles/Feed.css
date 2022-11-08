@@ -1,0 +1,5 @@
+.feed {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f6f8fa;
+}
