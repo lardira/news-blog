@@ -3,9 +3,11 @@ import SearchBox from '../components/SearchBox';
 import Feed from '../components/Feed';
 import Form from '../components/Form';
 import { PostsContext } from '../contexts/PostsContext';
+import { UserContext } from '../contexts/UserContext';
 
 const Home = () => {
   const { posts, addPost } = useContext(PostsContext);
+  const { user } = useContext(UserContext);
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [searchString, setSearchString] = useState('');
 
@@ -44,13 +46,15 @@ const Home = () => {
         onSearchHandler={onSearch}
         value={searchString}
       />
-      <Form
-        formTitle='Create Post'
-        inputs={inputFields}
-        onSubmit={onNewPost}
-        className='new-post-form'
-        buttonName='Create'
-      />
+      {user?.type === 'admin' && (
+        <Form
+          formTitle='Create Post'
+          inputs={inputFields}
+          onSubmit={onNewPost}
+          className='new-post-form'
+          buttonName='Create'
+        />
+      )}
       <Feed posts={filteredPosts} />
     </div>
   );

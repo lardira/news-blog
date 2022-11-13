@@ -40,7 +40,8 @@ header nav {
   align-items: center;
 }
 
-header nav a {
+header nav .nav-item {
+  cursor: pointer;
   text-decoration: none;
   font-weight: bold;
   font-size: 18pt;
@@ -51,7 +52,7 @@ header nav a {
   transition: color 0.3s;
 }
 
-header nav a:hover {
+header nav .nav-item:hover {
   color: white;
 }
 
