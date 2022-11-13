@@ -1,7 +1,8 @@
-import './styles/SignIn.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Form from '../components/Form';
+
+import './styles/SignIn.css';
 
 const SignIn = () => {
   const inputFields = {

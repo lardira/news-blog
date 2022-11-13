@@ -1,5 +1,6 @@
-import './styles/Post.css';
 import { useNavigate } from 'react-router-dom';
+
+import './styles/Post.css';
 
 const Post = ({ className, data }) => {
   const { imgSrc, title, text, id } = data;
