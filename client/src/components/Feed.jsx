@@ -1,6 +1,6 @@
-import './styles/Feed.css';
-
 import Post from './Post';
+
+import './styles/Feed.css';
 
 const Feed = ({ className, posts }) => {
   return (

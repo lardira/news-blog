@@ -1,8 +1,11 @@
-import React, { Fragment } from 'react';
+import { React, Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Developer from './components/Developer';
+import { UserContext } from './contexts/UserContext';
 
 function Layout() {
+  const { user, signOut } = useContext(UserContext);
+
   return (
     <Fragment>
       <header>
@@ -10,10 +13,24 @@ function Layout() {
           <Link to='/posts' className='home-button'>
             NewsBlog
           </Link>
-          <Link to='/sign-in' className='sign-in-button'>
-            Sign In
-          </Link>
-          <Link to='/about' className='about-button'>
+          {user ? (
+            <div className='logged-user-nav-items'>
+              <Link
+                to={`/profiles/${user.id}`}
+                className='logged-user-profile-button nav-item'
+              >
+                {user.login}
+              </Link>
+              <span className='sign-out-button nav-item' onClick={signOut}>
+                Sign Out
+              </span>
+            </div>
+          ) : (
+            <Link to='/sign-in' className='sign-in-button nav-item'>
+              Sign In
+            </Link>
+          )}
+          <Link to='/about' className='about-button nav-item'>
             About
           </Link>
         </nav>

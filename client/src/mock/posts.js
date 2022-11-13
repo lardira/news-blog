@@ -1,4 +1,4 @@
-const POSTS = [
+export const POSTS = [
   {
     id: '1',
     imgSrc:
@@ -36,10 +36,4 @@ const POSTS = [
   },
 ];
 
-const getBy = id => {
-  return POSTS.find(post => post.id === id);
-};
-
-const newPost = (id, imgSrc, title, text) => ({ id, imgSrc, title, text });
-
-export { POSTS, getBy, newPost };
+export default POSTS;

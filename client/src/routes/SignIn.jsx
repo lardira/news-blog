@@ -1,16 +1,23 @@
-import './styles/SignIn.css';
-import React from 'react';
+import { React, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Form from '../components/Form';
+import { UserContext } from '../contexts/UserContext';
+
+import './styles/SignIn.css';
 
 const SignIn = () => {
+  const {signIn} = useContext(UserContext);
+
   const inputFields = {
     Email: { type: 'email', required: true },
     Password: { type: 'password', required: true },
   };
 
-  const onSignIn = () => {
-    console.log('sign in');
+  const onSignIn = (event) => {
+    const login = event.target[0].value;
+    const password = event.target[1].value;
+
+    signIn(login, password);
   };
 
   return (

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import SearchBox from '../components/SearchBox';
 import Feed from '../components/Feed';
 import Form from '../components/Form';
-import { POSTS, newPost } from '../utils/posts.js';
+import { PostsContext } from '../contexts/PostsContext';
+import { UserContext } from '../contexts/UserContext';
 
 const Home = () => {
-  const [posts, setPosts] = useState(POSTS);
+  const { posts, addPost } = useContext(PostsContext);
+  const { user } = useContext(UserContext);
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [searchString, setSearchString] = useState('');
 
@@ -29,15 +31,14 @@ const Home = () => {
     const text = event.target[1].value;
     const imgSrc = event.target[2].value;
 
-    setPosts([...posts, newPost(posts.length + 1, imgSrc, title, text)]);
-
-    //gotta clean this up
+    addPost({ title, text, imgSrc });
     setSearchString('');
   };
 
   const onSearch = event => {
     setSearchString(event.target.value);
   };
+
   return (
     <div className='App'>
       <SearchBox
@@ -45,13 +46,15 @@ const Home = () => {
         onSearchHandler={onSearch}
         value={searchString}
       />
-      <Form
-        formTitle='Create Post'
-        inputs={inputFields}
-        onSubmit={onNewPost}
-        className='new-post-form'
-        buttonName='Create'
-      />
+      {user?.type === 'admin' && (
+        <Form
+          formTitle='Create Post'
+          inputs={inputFields}
+          onSubmit={onNewPost}
+          className='new-post-form'
+          buttonName='Create'
+        />
+      )}
       <Feed posts={filteredPosts} />
     </div>
   );

@@ -1,6 +1,7 @@
-import './styles/SignUp.css';
 import React from 'react';
 import Form from '../components/Form';
+
+import './styles/SignUp.css';
 
 const SignUp = () => {
   const inputFields = {

@@ -1,5 +1,6 @@
-import './styles/PostView.css';
 import React from 'react';
+
+import './styles/PostView.css';
 
 //maybe use post component with isViewed=true prop
 const PostView = ({ post }) => {
