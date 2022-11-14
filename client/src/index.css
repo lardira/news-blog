@@ -41,10 +41,11 @@ header nav {
 }
 
 header nav .nav-item {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18pt;
+  font-size: 1.2em;
   color: black;
   margin-left: 20px;
   margin-right: 20px;
@@ -63,6 +64,10 @@ header .home-button {
   color: black;
 
   transition: color 0.3s;
+}
+
+header nav .home-button:hover {
+  color: white;
 }
 
 header .title {
