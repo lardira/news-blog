@@ -1,4 +1,4 @@
-import './styles/Form.css';
+import "./styles/Form.css";
 
 //TODO: use component children enstead of array of objects
 //TODO: rewrite form
@@ -11,7 +11,7 @@ const Form = ({
   formTitle,
 }) => {
   const validateInputs = (inputs, event) => {
-    let message = '';
+    let message = "";
 
     const passed = Object.entries(inputs).every(([key, value], i) => {
       const eventValue = event.target[i].value;
@@ -35,7 +35,7 @@ const Form = ({
     return passed;
   };
 
-  const submitHandler = event => {
+  const submitHandler = (event) => {
     event.preventDefault();
     const passed = validateInputs(inputs, event);
     if (onSubmit && passed) {
@@ -45,20 +45,20 @@ const Form = ({
   };
 
   return (
-    <div className='form-container'>
-      <h3 className='form-title'>{formTitle || 'Form'}</h3>
+    <div className="form-container">
+      <h3 className="form-title">{formTitle || "Form"}</h3>
       <form className={`${className} form`} onSubmit={submitHandler}>
         {Object.entries(inputs).map(([key, value], i) => {
           return (
-            <label className='form-label' key={key + i}>
+            <label className="form-label" key={key + i}>
               {key}:
-              <input className='form-input' type={value.type} />
+              <input className="form-input" type={value.type} />
             </label>
           );
         })}
         <input
-          className='form-submit-button'
-          type='submit'
+          className="form-submit-button"
+          type="submit"
           value={buttonName}
         />
       </form>

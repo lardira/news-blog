@@ -1,11 +1,11 @@
-import Post from './Post';
+import Post from "./Post";
 
-import './styles/Feed.css';
+import "./styles/Feed.css";
 
 const Feed = ({ className, posts }) => {
   return (
-    <div className='feed-container'>
-      <div className={`${className || ''} feed`}>
+    <div className="feed-container">
+      <div className={`${className || ""} feed`}>
         {posts.map((post, i) => {
           //reverse order
           const mirroredPost = posts[posts.length - 1 - i];

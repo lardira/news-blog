@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from 'react';
-import USERS from '../mock/users';
+import { createContext, useEffect, useState } from "react";
+import USERS from "../mock/users";
 
 export const UserContext = createContext({
   user: null,
@@ -7,7 +7,7 @@ export const UserContext = createContext({
   //For mock authentication
   signIn: () => {},
   signUp: () => {},
-  signOut: () => {}
+  signOut: () => {},
 });
 
 export const UserProvider = ({ children }) => {
@@ -17,14 +17,18 @@ export const UserProvider = ({ children }) => {
   const [users, setUsers] = useState(USERS);
 
   const signIn = (login, password) => {
-    const found = users.find(u => u.login === login && u.password === password);
+    const found = users.find(
+      (u) => u.login === login && u.password === password
+    );
 
     if (found) setUser(found);
-    else alert('User was not found');
+    else alert("User was not found");
   };
 
   const signUp = (login, password, displayName) => {
-    const found = users.find(u => u.login === login && u.password === password);
+    const found = users.find(
+      (u) => u.login === login && u.password === password
+    );
 
     if (!found)
       setUsers(...users, {
@@ -32,7 +36,7 @@ export const UserProvider = ({ children }) => {
         login,
         password,
         displayName,
-        type: 'normal',
+        type: "normal",
       });
     else alert(`User ${login} already exists`);
   };

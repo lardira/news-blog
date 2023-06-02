@@ -1,16 +1,16 @@
-import { React, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import Form from '../components/Form';
-import { UserContext } from '../contexts/UserContext';
+import { React, useContext } from "react";
+import { Link } from "react-router-dom";
+import Form from "../components/Form";
+import { UserContext } from "../contexts/UserContext";
 
-import './styles/SignIn.css';
+import "./styles/SignIn.css";
 
 const SignIn = () => {
-  const {signIn} = useContext(UserContext);
+  const { signIn } = useContext(UserContext);
 
   const inputFields = {
-    Email: { type: 'email', required: true },
-    Password: { type: 'password', required: true },
+    Email: { type: "email", required: true },
+    Password: { type: "password", required: true },
   };
 
   const onSignIn = (event) => {
@@ -21,16 +21,16 @@ const SignIn = () => {
   };
 
   return (
-    <div className='sign-in-page-container'>
+    <div className="sign-in-page-container">
       <Form
         inputs={inputFields}
-        formTitle='Welcome'
-        className='sign-in-form'
-        buttonName='Sign In'
+        formTitle="Welcome"
+        className="sign-in-form"
+        buttonName="Sign In"
         onSubmit={onSignIn}
       />
-      <Link to='/sign-up' className='create-an-account-link'>
-        <span>Doesn't have an account?</span>
+      <Link to="/sign-up" className="create-an-account-link">
+        <span>Don't have an account?</span>
       </Link>
     </div>
   );
