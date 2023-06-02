@@ -1,13 +1,13 @@
-import './styles/Developer.css';
+import "./styles/Developer.css";
 
 const Developer = ({ className, imgSrc, alt, href, linkTitle }) => {
   return (
     <div className={`${className} developer`}>
-      <img className='developer-img' src={imgSrc} alt={alt}></img>
+      <img className="developer-img" src={imgSrc} alt={alt}></img>
       <a
-        className='developer-name'
-        rel='noreferrer'
-        target='_blank'
+        className="developer-name"
+        rel="noreferrer"
+        target="_blank"
         href={href}
       >
         {linkTitle}

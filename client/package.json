@@ -1,5 +1,6 @@
 {
   "name": "news-blog",
+  "proxy": "http://localhost:1024",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -16,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +40,9 @@
   },
   "description": "A simple React project.",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

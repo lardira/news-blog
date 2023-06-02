@@ -1,25 +1,25 @@
-import React from 'react';
-import Form from '../components/Form';
+import React from "react";
+import Form from "../components/Form";
 
-import './styles/SignUp.css';
+import "./styles/SignUp.css";
 
 const SignUp = () => {
   const inputFields = {
-    Email: { type: 'email', required: true },
-    Password: { type: 'password', required: true },
-    'Confirm Password': { type: 'password', required: true },
+    Email: { type: "email", required: true },
+    Password: { type: "password", required: true },
+    "Confirm Password": { type: "password", required: true },
   };
 
   const onSignUp = () => {
-    console.log('sign up');
+    console.log("sign up");
   };
 
   return (
     <Form
       inputs={inputFields}
-      formTitle='Welcome'
-      className='sign-up-form'
-      buttonName='Sign Un'
+      formTitle="Welcome"
+      className="sign-up-form"
+      buttonName="Sign Un"
       onSubmit={onSignUp}
     />
   );
