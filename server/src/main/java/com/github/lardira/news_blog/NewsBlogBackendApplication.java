@@ -1,4 +1,4 @@
-package com.github.lardira.news_blog_backend;
+package com.github.lardira.news_blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

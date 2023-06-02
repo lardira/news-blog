@@ -1,0 +1,26 @@
+2023-04-27 20:14:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-27 20:14:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-27 22:03:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-29 01:17:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "TEXT CHARACTER VARYING(255)": "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur fr... (851)"; SQL statement:
+update post set image=?,text=?,title=? where id=? [22001-214]
+2023-04-29 01:26:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-29 01:29:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-29 01:50:33 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-04-29 18:21:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-02 12:11:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-02 12:14:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "TEXT CHARACTER VARYING(255)": "U&'His eyes remained on Grid. It was more like meditating. In fact, Baal\\2019s e... (289)"; SQL statement:
+insert into post (image,text,title,id) values (?,?,?,default) [22001-214]
+2023-06-02 12:18:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-02 12:19:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
